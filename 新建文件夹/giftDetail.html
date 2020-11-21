@@ -1,0 +1,265 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>礼品兑换-详情页</title>
+    <link rel="stylesheet" type="text/css" href="css/public.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="js/jquery1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/vue.min.js"></script>
+    <script type="text/javascript" src="js/public.js"></script>
+</head>
+<body class="bgFCFCFC">
+    <!--top-->
+    <div id="top">
+        <div class="topHead">
+            <div class="wrap clearfloat">
+                <h2>{{topData.topHead}}</h2>
+                <div class="topHeadCont clearfloat">
+                    <p>{{topData.topQQ}}</p>
+                    <div class="topHeadContW">
+                        <!--登录前-->
+                        <div class="topHeadInner topHeadBefor">
+                            <a class="topLogin" href="javascript:;">{{topData.topLogin[0]}}</a> <span>|</span> <a class="topRegister" href="javascript:;">{{topData.topLogin[1]}}</a>
+                        </div>
+                        <!--登录后-->
+                        <div class="topHeadInner topHeadBefore" style="display: none;">
+                            您好！【云腾  （ID:7980046   <em class="ico1">等级：12</em>）】<span>|</span><a class="topExit" href="javascript:;">【退出】</a><span>|</span> <em class="ico2">金币：100</em> <span>|</span> <em class="ico3">银行：100</em> <span>|</span> 成长值：0
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="topNav">
+            <div class="wrap clearfloat">
+                <div class="logo"><a href="index.html"><img src="picture/logo.png" /></a></div>
+                <nav>
+                    <ul class="clearfloat">
+                        <li><a href="index.html">{{topData.navText[0]}}</a></li>
+                        <li><a href="news.html">{{topData.navText[1]}}</a></li>
+                        <li><a href="game.html">{{topData.navText[2]}}</a></li>
+                        <li><a href="cooperation.html">{{topData.navText[3]}}</a></li>
+                        <li class="active"><a href="gift.html">{{topData.navText[4]}}</a></li>
+                        <li><a href="user.html">{{topData.navText[5]}}</a></li>
+                        <li><a href="rank.html">{{topData.navText[6]}}</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="muen">
+                <span class="muenX"></span>
+                <span class="muenY"></span>
+                <span class="muenZ"></span>
+            </div>
+        </div>
+    </div>
+    <!--/top-->
+    <!--登录、注册-->
+    <div class="loginWrap" id="login">
+        <div class="loginTan loginTanL">
+            <span class="loginClose"></span>
+            <h2>{{loginData.loginText[0]}}</h2>
+            <div class="loginInner">
+                <div class="loginInput">
+                    <input type="text" name="" id="" value="" placeholder="账号 / 手机号" />
+                </div>
+            </div>
+            <div class="loginInner">
+                <div class="loginInput">
+                    <input type="password" name="" id="" value="" placeholder="请输入密码" />
+                </div>
+            </div>
+            <div class="loginInner loginInnerYz clearfloat">
+                <div class="loginInput">
+                    <input type="text" name="" id="" value="" placeholder="验证码" />
+                </div>
+                <span><img src="picture/yzm_img.jpg"></span>
+            </div>
+            <div class="loginMark clearfloat">
+                <p><span class="chooseBtn"></span><label>{{loginData.passwordText[0]}}</label></p>
+                <a href="">{{loginData.passwordText[1]}}</a>
+            </div>
+
+            <button class="loginSure">{{loginData.loginName[0]}}</button>
+
+            <div class="loginBottom">
+                <a class="logoBack1" href="javascript:;">{{loginData.loginBototm[0]}}</a>
+            </div>
+        </div>
+
+        <div class="loginTan loginTanR">
+            <span class="loginClose"></span>
+            <h2>{{loginData.loginText[1]}}</h2>
+            <div class="loginInner">
+                <div class="loginInput">
+                    <input type="text" name="" id="" value="" placeholder="手机号" />
+                </div>
+            </div>
+            <div class="loginInner">
+                <div class="loginInput">
+                    <input type="password" name="" id="" value="" placeholder="密码" />
+                </div>
+            </div>
+            <div class="loginInner">
+                <div class="loginInput">
+                    <input type="text" name="" id="" value="" placeholder="推荐人ID" />
+                </div>
+            </div>
+            <div class="loginInner">
+                <div class="loginInput">
+                    <input type="text" name="" id="" value="" placeholder="昵称" />
+                </div>
+            </div>
+            <div class="loginInner loginInnerYz clearfloat">
+                <div class="loginInput">
+                    <input type="text" name="" id="" value="" placeholder="验证码" />
+                </div>
+                <span><img src="picture/yzm_img.jpg"></span>
+            </div>
+            <div class="loginInner loginInnerYz clearfloat">
+                <div class="loginInput">
+                    <input type="text" name="" id="" value="" placeholder="短信验证码" />
+                </div>
+                <span>{{loginData.loginYz}}</span>
+            </div>
+
+            <button class="loginSure">{{loginData.loginName[1]}}</button>
+
+            <div class="loginBottom">
+                <a class="logoBack2" href="javascript:;">{{loginData.loginBototm[1]}}</a>
+            </div>
+
+        </div>
+    </div>
+    <!--/登录、注册-->
+
+    <div id="main" class="contentMain giftDetalBox">
+        <div class="wrap clearfloat">
+            <table class="giftDetalTable1" border="0" cellspacing="0" cellpadding="0">
+                <tr><th colspan="9">{{tableTitle[0]}}</th></tr>
+                <tr v-for="(item,index) in tableList1"><td v-for="(item,index) in tableList1[index]">{{item}}</td></tr>
+            </table>
+
+            <table class="giftDetalTable2" border="0" cellspacing="0" cellpadding="0">
+                <tr><th colspan="5">{{tableTitle[1]}}</th></tr>
+                <tr v-for="(item,index) in tableList2"><td v-for="(item,index) in tableList2[index]">{{item}}</td></tr>
+            </table>
+            <p class="tableDer">(流水超出部分需加收3%手续费)</p>
+
+            <div class="giftDetalWrap clearfloat">
+                <div class="left giftDetalL">
+                    <div class="pic"><img src="picture/giftdetial.img" /></div>
+                    <h3>{{giftDetial.title}}</h3>
+                    <div class="giftDetalBototm"><span>账户余额：<em>{{giftDetial.num[0]}}</em></span><span>兑换总额：<em>{{giftDetial.num[1]}}</em></span></div>
+                    <p>提示：兑换总额=当前等级对应兑换价格+流水超出金额收手续费</p>
+                </div>
+                <div class="left giftDetalForm">
+                    <div class="giftDFormInner clearfloat">
+                        <h3>兑换数量：</h3>
+                        <div class="giftDFormInput">
+                            <div class="inputInner">
+                                <input type="text" name="" id="" value="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="giftDFormInner clearfloat">
+                        <h3>安全密码：</h3>
+                        <div class="giftDFormInput">
+                            <div class="inputInner">
+                                <input type="text" name="" id="" value="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="giftDFormInner clearfloat">
+                        <h3>绑定手机号：</h3>
+                        <div class="giftDFormInput">
+                            <div class="inputInner">
+                                <input type="text" name="" id="" value="" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="giftDFormInner clearfloat">
+                        <h3>验证码：</h3>
+                        <div class="giftDFormInput giftDFormInputYz clearfloat">
+                            <div class="inputInner">
+                                <input type="text" name="" id="" value="" />
+                            </div>
+                            <a href="javascritp:;"><img src="picture/yzm_img1.jpg" /></a>
+                        </div>
+                    </div>
+                    <div class="giftDFormInner clearfloat">
+                        <h3>短信验证码：</h3>
+                        <div class="giftDFormInput giftDFormInputYz clearfloat">
+                            <div class="inputInner">
+                                <input type="text" name="" id="" value="" />
+                            </div>
+                            <a href="javascritp:;">发送短信</a>
+                        </div>
+                    </div>
+                    <div class="giftDFormInner clearfloat">
+                        <h3>&nbsp;</h3>
+                        <div class="giftDFormInput giftDFormInputSure">
+                            <button>我要兑换</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <!--footer-->
+    <div id="footer">
+        <div class="wrap clearfloat">
+            <div class="ewm">
+                <img src="picture/ewm.jpg" />
+                <p>{{footerEwm}}</p>
+            </div>
+            <div class="left footerM">
+                <p>{{footerText[0]}}</p>
+                <p>{{footerText[1]}}</p>
+                <p>{{footerText[2]}}</p>
+            </div>
+            <div class="left">
+                <ul>
+                    <li v-for='(item,index) in footerInfor'>
+                        <span v-bind:class="'ico' + (index+1)"></span>
+                        <em v-html="item.text"></em>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--/footer-->
+
+</body>
+<script type="text/javascript">
+    var app = new Vue({
+        el: '#main',
+        data: {
+            tableTitle: ['兑换价格', '兑换流水'],
+            tableList1: [
+                ['VIP等级', 'VIP0', 'VIP1', 'VIP2', 'VIP3', 'VIP4', 'VIP5', 'VIP6', 'VIP7'],
+                ['兑换价格', '52,500', '52,500', '52,500', '52,500', '52,500', '52,500', '52,500', '52,500']
+            ],
+            tableList2: [
+                ['3日流水', '3日可用流水', '可免费兑换金额', '超出金额', '超出金额手续费'],
+                ['0', '0', '0', '52,500', '1,575']
+            ],
+            giftDetial: {
+                title: '运动智能手环',
+                num: ['0', '54,075'],
+                img: 'images/gift_d_img.jpg'
+            }
+
+
+        }
+    })
+</script>
+</html>

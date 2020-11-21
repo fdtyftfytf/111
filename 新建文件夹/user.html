@@ -1,0 +1,294 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<title>个人中心-个人资料</title>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/user.css"/>
+		<script type="text/javascript" src="js/jquery1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/vue.min.js"></script>
+		<script type="text/javascript" src="js/public.js"></script>
+	</head>
+	<body class="bgFCFCFC">
+		<!--top-->
+		<div id="top">
+			<div class="topHead">
+				<div class="wrap clearfloat">
+					<h2>{{topData.topHead}}</h2>
+					<div class="topHeadCont clearfloat">
+						<p>{{topData.topQQ}}</p>
+						<div class="topHeadContW">
+							<!--登录前-->
+							<div class="topHeadInner topHeadBefor">
+								<a class="topLogin" href="javascript:;">{{topData.topLogin[0]}}</a> <span>|</span> <a class="topRegister" href="javascript:;">{{topData.topLogin[1]}}</a>
+							</div>
+							<!--登录后-->
+							<div class="topHeadInner topHeadBefore" style="display: none;">
+								您好！【云腾  （ID:7980046   <em class="ico1">等级：12</em>）】<span>|</span><a class="topExit" href="javascript:;">【退出】</a><span>|</span> <em class="ico2">金币：100</em> <span>|</span> <em class="ico3">银行：100</em> <span>|</span> 成长值：0
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="topNav">
+				<div class="wrap clearfloat">
+					<div class="logo"><a href="index.html"><img src="picture/logo.png"/></a></div>
+					<nav>
+						<ul class="clearfloat">
+							<li><a href="index.html">{{topData.navText[0]}}</a></li>
+							<li><a href="news.html">{{topData.navText[1]}}</a></li>
+							<li><a href="game.html">{{topData.navText[2]}}</a></li>
+							<li><a href="cooperation.html">{{topData.navText[3]}}</a></li>
+							<li><a href="gift.html">{{topData.navText[4]}}</a></li>
+							<li class="active"><a href="user.html">{{topData.navText[5]}}</a></li>
+							<li><a href="rank.html">{{topData.navText[6]}}</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="muen">
+					<span class="muenX"></span>
+					<span class="muenY"></span>
+					<span class="muenZ"></span>
+				</div>
+			</div>
+		</div>
+		<!--/top-->
+		
+		<!--登录、注册-->
+		<div class="loginWrap" id="login">
+			<div class="loginTan loginTanL">
+				<span class="loginClose"></span>
+				<h2>{{loginData.loginText[0]}}</h2>
+				<div class="loginInner">
+					<div class="loginInput">
+						<input type="text" name="" id="" value="" placeholder="账号 / 手机号"/>
+					</div>
+				</div>
+				<div class="loginInner">
+					<div class="loginInput">
+						<input type="password" name="" id="" value="" placeholder="请输入密码"/>
+					</div>
+				</div>
+				<div class="loginInner loginInnerYz clearfloat">
+					<div class="loginInput">
+						<input type="text" name="" id="" value="" placeholder="验证码"/>
+					</div>
+					<span><img src="picture/yzm_img.jpg"></span>
+				</div>
+				<div class="loginMark clearfloat">
+					<p><span class="chooseBtn"></span><label>{{loginData.passwordText[0]}}</label></p>
+					<a href="">{{loginData.passwordText[1]}}</a>
+				</div>
+				
+				<button class="loginSure">{{loginData.loginName[0]}}</button>
+				
+				<div class="loginBottom">
+					<a class="logoBack1" href="javascript:;">{{loginData.loginBototm[0]}}</a>
+				</div>
+			</div>
+			
+			<div class="loginTan loginTanR">
+				<span class="loginClose"></span>
+				<h2>{{loginData.loginText[1]}}</h2>
+				<div class="loginInner">
+					<div class="loginInput">
+						<input type="text" name="" id="" value="" placeholder="手机号"/>
+					</div>
+				</div>
+				<div class="loginInner">
+					<div class="loginInput">
+						<input type="password" name="" id="" value="" placeholder="密码"/>
+					</div>
+				</div>
+				<div class="loginInner">
+					<div class="loginInput">
+						<input type="text" name="" id="" value="" placeholder="推荐人ID"/>
+					</div>
+				</div>
+				<div class="loginInner">
+					<div class="loginInput">
+						<input type="text" name="" id="" value="" placeholder="昵称"/>
+					</div>
+				</div>
+				<div class="loginInner loginInnerYz clearfloat">
+					<div class="loginInput">
+						<input type="text" name="" id="" value="" placeholder="验证码"/>
+					</div>
+					<span><img src="picture/yzm_img.jpg"></span>
+				</div>
+				<div class="loginInner loginInnerYz clearfloat">
+					<div class="loginInput">
+						<input type="text" name="" id="" value="" placeholder="短信验证码"/>
+					</div>
+					<span>{{loginData.loginYz}}</span>
+				</div>
+				
+				<button class="loginSure">{{loginData.loginName[1]}}</button>
+				
+				<div class="loginBottom">
+					<a class="logoBack2" href="javascript:;">{{loginData.loginBototm[1]}}</a>
+				</div>
+				
+			</div>
+		</div>
+		<!--/登录、注册-->
+		
+		<div class="user clearfloat">
+			<div id="userMenu" class="user-menu">
+				<div class="user-name">
+					<p>云腾</p>
+					<p>ID: 793008</p>
+				</div>
+				<div class="account">
+					<p>账户：100</p>
+					<p>银行：0</p>
+				</div>
+				<dl>
+					<dt>用户中心</dt>
+					<dd v-for="(item,index) in userMenu"><a v-bind:href="item.link">{{item.text}}</a></dd>
+				</dl>
+				<dl>
+					<dt>福利中心</dt>
+					<dd v-for="(item,index) in welfareMenu"><a v-bind:href="item.link">{{item.text}}</a></dd>
+				</dl>
+			</div>
+			<div class="user-con">
+				<div id="userData" class="user-data">
+					<form>
+						<div class="form-group clearfloat">
+							<div class="col name">昵称：</div>
+							<div class="col"><input class="input" type="text" value="云腾"></div>
+							<div class="col tips"></div>
+						</div>
+						<div class="form-group clearfloat">
+							<div class="col name">手机号：</div>
+							<div class="col"><input class="input" type="text" value="150****8094"></div>
+							<div class="col tips"></div>
+						</div>
+						<div class="form-group clearfloat">
+							<div class="col name clearfloat">登录短信验证：</div>
+							<div class="col">
+								<input class="radio" type="radio" id="openMessage" name="messageSwitch">
+								<label for="openMessage">开启</label>
+								<input class="radio" type="radio" id="closeMessage" name="messageSwitch">
+								<label for="closeMessage">关闭</label>
+							</div>
+						</div>
+						<div class="form-group clearfloat">
+							<div class="col name">QQ：</div>
+							<div class="col"><input class="input" type="text" placeholder="提交后不能修改"></div>
+							<div class="col tips">兑奖需要核对，请正确填写</div>
+						</div>
+						<div class="form-group clearfloat">
+							<div class="col name">邮箱：</div>
+							<div class="col"><input class="input" type="text" placeholder="提交后不能修改"></div>
+							<div class="col tips">兑奖需要核对，请正确填写</div>
+						</div>
+						<div class="form-group clearfloat">
+							<div class="col name">姓名：</div>
+							<div class="col"><input class="input" type="text" placeholder="提交后不能修改"></div>
+							<div class="col tips">兑奖需要核对，请正确填写</div>
+						</div>
+						<button class="submit-btn">提交</button>
+					</form>
+					<div class="dynamic">
+						<h3>账号动态</h3>
+						<table>
+							<thead>
+								<tr>
+									<th>事件</th><th>时间</th><th>地区</th><th>状态</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr v-for="(item,index) in dynamic">
+									<td>{{item.event}}</td>
+									<td>{{item.date}}</td>
+									<td>{{item.region}}</td>
+									<td>{{item.state}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<!--footer-->
+		<div id="footer">
+			<div class="wrap clearfloat">
+				<div class="ewm">
+					<img src="picture/ewm.jpg"/>
+					<p>{{footerEwm}}</p>
+				</div>
+				<div class="left footerM">
+					<p>{{footerText[0]}}</p>
+					<p>{{footerText[1]}}</p>
+					<p>{{footerText[2]}}</p>
+				</div>
+				<div class="left">
+					<ul>
+						<li v-for='(item,index) in footerInfor'>
+							<span v-bind:class="'ico' + (index+1)"></span>
+							<em v-html="item.text"></em>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--/footer-->
+	</body>
+</html>
+<script type="text/javascript">
+$(function(){
+
+	var userData = new Vue({
+		el: '#userData',
+		data: {
+			dynamic: [
+				{
+					event: '【登录】 2018-10-31  09:20:43|125.75.16.133',
+					date: '2018-10-31  09:20:43',
+					region: '甘肃   兰州',
+					state: '成功'
+				},
+				{
+					event: '【登录】 2018-10-31  09:20:43|125.75.16.133',
+					date: '2018-10-31  09:20:43',
+					region: '甘肃   兰州',
+					state: '成功'
+				},
+				{
+					event: '【登录】 2018-10-31  09:20:43|125.75.16.133',
+					date: '2018-10-31  09:20:43',
+					region: '甘肃   兰州',
+					state: '成功'
+				},
+				{
+					event: '【登录】 2018-10-31  09:20:43|125.75.16.133',
+					date: '2018-10-31  09:20:43',
+					region: '甘肃   兰州',
+					state: '成功'
+				},
+				{
+					event: '【登录】 2018-10-31  09:20:43|125.75.16.133',
+					date: '2018-10-31  09:20:43',
+					region: '甘肃   兰州',
+					state: '成功'
+				},{
+					event: '【登录】 2018-10-31  09:20:43|125.75.16.133',
+					date: '2018-10-31  09:20:43',
+					region: '甘肃   兰州',
+					state: '成功'
+				}
+			]
+		},
+	})
+
+});
+</script>
